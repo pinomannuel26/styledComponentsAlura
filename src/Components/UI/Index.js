@@ -1,0 +1,61 @@
+import styled from "styled-components"
+/*AL PONER EN UN CLASE EXTERNA Y NO SOLO EN LA CLASE Q LO NECESITA SE PUEDE REUTILIZAR EN MUCHAS CLASE
+ES UN COMPONENTE ESTILIZADO */
+export const Icono = styled.img `
+    height: 25px;
+    width: 25px;
+`;
+
+/**HERENCIA */
+export const IconoTema = styled(Icono)`
+filter: ${({theme})=> theme.filter};
+`
+
+export const Btn = styled.button `
+  margin: 15px auto 0px auto;
+  display: block;
+  border-radius: 20px;
+  background-color: #41d3be;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 20px;
+  cursor: pointer;
+`;
+
+export const Box = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: ${({theme})=> theme.inside};
+  color: ${({theme})=> theme.text};
+  border-radius: 5px;
+  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  width: 48%;
+  @media (max-width: 800px) 
+  {
+    width: 95%;
+    margin: 5px;
+  }
+
+`;
+export const Saldo = styled.div `
+  font-weight: 700;
+  font-size: 32px;
+`;
+
+export const Detalle = styled.span `
+  color: #41d3be;
+  font-size: 24px;
+`;
+
+export const BtnTema = styled.div`
+  position: absolute;
+  top: 4vh;
+  right: 20px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+`;
